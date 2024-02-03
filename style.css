@@ -10,6 +10,7 @@ body {
   min-height: 2000px;
 }
 
+/* Hero */
 .hero::before {
   content: "";
   position: absolute;
@@ -17,8 +18,9 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(img/bg.jpg);
+  background-image: url(img/bg1.jpg);
   background-size: cover;
+  background-position: center;
   z-index: -1;
   filter: grayscale();
 }
@@ -63,6 +65,50 @@ body {
   color: #fff;
   box-shadow: var(--shadow);
 }
+/* Akhir Hero */
+
+/* Home */
+/* .mynavbar {
+} */
+
+.mynavbar .navbar-brand,
+.mynavbar .offcanvas-title {
+  font-family: "Sacramento", cursive;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.mynavbar .nav-link {
+  text-transform: uppercase;
+}
+
+.mynavbar {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(4px);
+}
+
+.home {
+  position: relative;
+  min-height: 100vh;
+  margin-top: -4rem;
+  padding-top: 16rem;
+  padding-bottom: 5rem;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/bg2.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: opacity(0.2);
+}
+/* Akhir Home */
 
 /* Breakpoint */
 /* Lpatop */
@@ -80,9 +126,22 @@ body {
   html {
     font-size: 65%;
   }
+
   .simply-countdown > .simply-section {
     padding: 60px;
     margin: 5px;
+  }
+
+  .mynavbar .navbar-brand,
+  .mynavbar .offcanvas-title {
+    font-family: "Sacramento", cursive;
+    font-size: 2.5rem;
+  }
+
+  .mynavbar .offcanvas-body {
+    font-size: 2rem;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 
