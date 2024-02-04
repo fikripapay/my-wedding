@@ -8,7 +8,6 @@ body {
   font-size: 1.2rem;
   font-family: "Work Sans", sans-serif;
   min-height: 2000px;
-  overflow-x: hidden;
 }
 
 /* Hero */
@@ -69,9 +68,6 @@ body {
 /* Akhir Hero */
 
 /* Home */
-/* .mynavbar {
-} */
-
 .mynavbar .navbar-brand,
 .mynavbar .offcanvas-title {
   font-family: "Sacramento", cursive;
@@ -98,7 +94,10 @@ body {
   min-height: 100vh;
 }
 
-.home h2 {
+.home h2,
+.info h2,
+.story h2,
+.gallery h2 {
   color: var(--pink);
   font-family: "Sacramento";
   font-size: 5rem;
@@ -142,18 +141,11 @@ body {
 }
 /* Akhir Home */
 
-/* Informasi */
+/* Info */
 .info {
   background-color: var(--bg);
   color: white;
   padding: 5rem 0;
-}
-
-.info h2 {
-  font-family: "Sacramento";
-  color: var(--pink);
-  font-size: 3rem;
-  font-weight: bold;
 }
 
 .info .alamat {
@@ -185,16 +177,171 @@ body {
   font-size: 1rem;
 }
 
-/* Akhir Informasi */
+/* Akhir Info */
+
+/* Story */
+.story,
+.gallery {
+  padding: 5rem 0;
+}
+
+.story span,
+.gallery span {
+  text-transform: uppercase;
+  color: #666;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.story p,
+.gallery p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.timeline {
+  list-style: none;
+  padding: 1.4rem 0;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  width: 1px;
+  background-color: #ccc;
+  left: 50%;
+}
+
+.timeline li {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.timeline li::before,
+.timeline li::after {
+  content: "";
+  display: table;
+}
+
+.timeline li::after {
+  clear: both;
+}
+
+.timeline li .timeline-image {
+  width: 140px;
+  height: 140px;
+  background-color: #ccc;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+.timeline li .timeline-panel {
+  width: 40%;
+  float: left;
+  border: 1px solid #ccc;
+  padding: 2rem;
+  position: relative;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.timeline li .timeline-panel::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ccc;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+  top: 70px;
+  right: -15px;
+}
+
+.timeline li .timeline-panel::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #fff;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  top: 71px;
+  right: -13px;
+}
+
+.timeline li.timeline-inverted .timeline-panel {
+  float: right;
+}
+
+.timeline li.timeline-inverted .timeline-panel::before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+
+.timeline li.timeline-inverted .timeline-panel::after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -13px;
+  right: auto;
+}
+/* Akhir Story */
+
+/* Gallery */
+.gallery {
+  background-color: #f5f5f5;
+}
+/* Akhir Gallery */
 
 /* Breakpoint */
-/* Lpatop */
+/* Laptop */
 @media (max-width: 992px) {
   html {
     font-size: 75%;
   }
+
   .simply-countdown > .simply-section {
     padding: 70px;
+  }
+
+  .timeline::before {
+    left: 60px;
+  }
+
+  .timeline li .timeline-image {
+    left: 15px;
+    margin-left: 45px;
+    top: 16px;
+  }
+
+  .timeline li .timeline-panel {
+    width: calc((100% - 200px));
+    float: right;
+  }
+
+  .timeline li .timeline-panel::before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+
+  .timeline li .timeline-panel::after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -13px;
+    right: auto;
   }
 }
 
@@ -217,8 +364,11 @@ body {
 
   .mynavbar .offcanvas-body {
     font-size: 2rem;
-    margin: 0 auto;
     text-align: center;
+  }
+
+  .sticky-top {
+    overflow: hidden;
   }
 }
 
@@ -227,8 +377,31 @@ body {
   html {
     font-size: 60%;
   }
+
   .simply-countdown > .simply-section {
     padding: 45px;
     margin: 3px;
+  }
+
+  .mynavbar .offcanvas-body {
+    margin: 0 auto;
+  }
+
+  .timeline li .timeline-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .timeline li .timeline-panel {
+    width: 60%;
+    transform: translateX(-10px);
+  }
+
+  .timeline li .timeline-panel::before {
+    top: 30px;
+  }
+
+  .timeline li .timeline-panel::after {
+    top: 31px;
   }
 }
