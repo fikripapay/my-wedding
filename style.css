@@ -80,11 +80,6 @@ body {
   text-transform: uppercase;
 }
 
-.mynavbar {
-  background-color: rgba(255, 255, 255, 0.3) !important;
-  backdrop-filter: blur(4px);
-}
-
 .mynavbar .offcanvas {
   height: 100vh;
 }
@@ -191,7 +186,8 @@ body {
 }
 
 .story span,
-.gallery span .gifts span {
+.gallery span,
+.gifts span {
   text-transform: uppercase;
   color: #666;
   font-size: 0.9rem;

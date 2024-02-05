@@ -46,7 +46,7 @@
       </main>
     </section>
 
-    <nav class="navbar navbar-expand-md sticky-top mynavbar">
+    <nav class="navbar navbar-expand-md sticky-top bg-light mynavbar">
       <div class="container">
         <a class="navbar-brand" href="#">My Wedding</a>
         <button
@@ -553,6 +553,7 @@
     <script>
       const stickyTop = document.querySelector(".sticky-top");
       const offcanvas = document.querySelector(".offcanvas");
+      const navlink = document.querySelector(".nav-link");
 
       offcanvas.addEventListener("show.bs.offcanvas", function () {
         stickyTop.style.overflow = "visible";
